@@ -18,10 +18,10 @@ INPUT : JSON 정보를 기반으로 자연어 생성한 프롬프트<br>
 OUTPUT : INPUT 프롬프트의 토큰 수, KoBERT 벡터 크기, KoBERT 임베딩 벡터 값<br><br>
 
 4.참고 사항<br>
-KoBERT는 한 번 정보를 반환할 때 최대 512토큰을 반환하며 그 이상의 토큰은 잘라서 반환하지 않느다. 그러기에 현재 프롬프트가 몇 토큰인지 확인하는 코드를 추가하였다<br>
-KoBERT 임베딩 벡터 값이 상당히 많이 나올텐데 실습용으로 앞의 N개의 데이터만 반환되게 하고 싶으면 print("KoBERT 임베딩 벡터 값:", embedding) -> print("KorBERT 임베딩 벡터 값:", embedding[:N]) 으로 수정하면된다<br>
-디폴트로 적어둔 JSON 데이터의 결과는 다음과 같으니 필요시 사용<br>
+-KoBERT는 한 번 정보를 반환할 때 최대 512토큰을 반환하며 그 이상의 토큰은 잘라서 반환하지 않느다. 그러기에 현재 프롬프트가 몇 토큰인지 확인하는 코드를 추가하였다<br>
+-KoBERT 임베딩 벡터 값이 상당히 많이 나올텐데 실습용으로 앞의 N개의 데이터만 반환되게 하고 싶으면 print("KoBERT 임베딩 벡터 값:", embedding) -> print("KorBERT 임베딩 벡터 값:", embedding[:N]) 으로 수정하면된다<br>
+-디폴트로 적어둔 JSON 데이터의 결과는 다음과 같으니 필요시 사용<br>
 [DefaultData.txt](https://github.com/user-attachments/files/20042407/DefaultData.txt)<br>
-리포지토리에는 KorBERT라고 적혀있지만 이건 틀렸고 <font color="red">KoBERT</font>가 맞다<br>
+-리포지토리에는 KorBERT라고 적혀있지만 이건 틀렸고 <span style="color:red">KoBERT</span>가 맞다<br>
 
 
