@@ -11,7 +11,8 @@ pip install transformers torch sentencepiece kobert-transformers 명령어를 �
 2.각 파일 별 특성<br>
 NLG_test.py : 자연어 생성 파일, 테스트를 위해 python NLG_test.py 실행<br>
 해당 파일에서 문장 형식의 프롬프트로 자연어 생성을 한 이유는 KoBERT 모델이 자연스러운 한국어 문장 형식의 자연어를 인식하는 모델이기 때문<br>
-NL_TO_VEC.py : JSON 데이터를 이용하여 생성한 프롬프트를 KoBERT를 이용하여 벡터 정보로 반환 후 관련 정보들을 반환환<br><br>
+NL_TO_VEC.py : JSON 데이터를 이용하여 생성한 프롬프트를 KoBERT를 이용하여 벡터 정보로 반환 후 관련 정보들을 반환환<br>
+CHK_TKN.py : 생성한 프롬프트의 토큰 수를 확인하는 파일<br><br>
 
 3.INPUT , OUTPUT<br>
 INPUT : JSON 정보를 기반으로 자연어 생성한 프롬프트<br>
@@ -22,6 +23,7 @@ OUTPUT : INPUT 프롬프트의 토큰 수, KoBERT 벡터 크기, KoBERT 임베�
 -KoBERT 임베딩 벡터 값이 상당히 많이 나올텐데 실습용으로 앞의 N개의 데이터만 반환되게 하고 싶으면 print("KoBERT 임베딩 벡터 값:", embedding) -> print("KorBERT 임베딩 벡터 값:", embedding[:N]) 으로 수정하면된다<br>
 -디폴트로 적어둔 JSON 데이터의 결과는 다음과 같으니 필요시 사용<br>
 [DefaultData.txt](https://github.com/user-attachments/files/20042407/DefaultData.txt)<br>
+-CHK_TKN.py 와 NL_TO_VEC.py의 토큰 수 차이가 2정도 생긴다. 이유는 CHK_TKN.py는 순수 프롬프트의 토큰 수만, NL_TO_VEC.py는 모델 자체에 들어간 토큰 수로 순수 문장의 프롬프트 토큰 수 + 문장의 시작, 문장의 끝 구분자 토큰이 추가되어있기 때문이다<br>
 -리포지토리에는 KorBERT❗라고 적혀있지만 이건 틀렸고 KoBERT✅가 맞다<br>
 
 
